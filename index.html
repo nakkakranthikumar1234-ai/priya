@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1030">
+<title>For Priya 💛</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Great+Vibes&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1a1030;--bg2:#2a1642;--gold:#f0c987;--rose:#f2a7b8;--ivory:#fff4ea;--mute:#cdbfd8;
+--script:'Great Vibes','Snell Roundhand',cursive;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Nunito',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:radial-gradient(120% 80% at 50% 0%,var(--bg2),var(--bg));color:var(--ivory);font-family:var(--sans);line-height:1.7;overflow-x:hidden;
+padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+.hidden{display:none!important}
+/* GATE */
+#gate{position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;
+background:radial-gradient(100% 70% at 50% 100%,#6a2a6a66,transparent),#1a1030cc;transition:opacity 1s}
+#gate h1{font-family:var(--script);font-weight:400;font-size:clamp(2.8rem,13vw,4.2rem);line-height:1.15;margin:18px 0 10px;color:var(--gold);text-shadow:0 0 24px #f0c98766}
+#gate p{color:var(--mute);max-width:300px}
+.lock{width:84px;height:84px;filter:drop-shadow(0 0 18px #f0c98777);animation:beat 2.4s infinite}
+@keyframes beat{50%{transform:scale(1.07)}}
+#pw{margin-top:26px;width:min(280px,80vw);padding:15px 18px;border-radius:40px;border:1.5px solid #f0c98799;background:#ffffff10;color:var(--ivory);
+font:600 1.1rem var(--sans);text-align:center;outline:none;letter-spacing:.08em}
+#pw:focus{border-color:var(--gold);box-shadow:0 0 0 4px #f0c98722}
+#pw::placeholder{color:#cdbfd899;letter-spacing:0;font-weight:400}
+.btn{margin-top:16px;padding:14px 34px;border:0;border-radius:40px;background:linear-gradient(135deg,var(--gold),var(--rose));color:#2a1230;font:700 1rem var(--sans);cursor:pointer;box-shadow:0 8px 30px #f2a7b844}
+.btn:active{transform:scale(.97)}
+#err{height:24px;margin-top:10px;color:var(--rose);font-size:.9rem}
+.shake{animation:sh .5s}
+@keyframes sh{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+/* INTRO */
+#intro{position:fixed;inset:0;z-index:35;background:#1a1030dd;display:flex;align-items:center;justify-content:center;text-align:center;padding:34px;transition:opacity 1.2s}
+#intro p{font-family:var(--serif);font-style:italic;font-size:clamp(1.9rem,8vw,2.8rem);line-height:1.3;opacity:0;transition:opacity 1.4s}
+#intro p.on{opacity:1}
+#skip{position:absolute;bottom:calc(24px + env(safe-area-inset-bottom));color:var(--mute);font-size:.8rem;opacity:.7}
+/* SECTIONS */
+.orn{color:var(--gold);letter-spacing:.6em;font-size:.8rem;margin:0 0 22px;opacity:.8}
+section{position:relative;z-index:2;padding:80px 26px;max-width:560px;margin:0 auto;text-align:center}
+.hero{min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:40px}
+.hero{position:relative}
+.hero::before{content:'';position:absolute;top:0;bottom:0;left:50%;margin-left:-50vw;width:100vw;z-index:-1;background:url(images/us.jpg) center 30%/cover;opacity:.3;filter:blur(2px) saturate(1.1);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.hero .nm{font-family:var(--script);font-size:clamp(4.6rem,24vw,7.4rem);line-height:1.05;margin:8px 0 0;color:var(--ivory);text-shadow:0 0 30px #f2a7b8aa,0 0 60px #f0c98755;animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{text-shadow:0 0 40px #f2a7b8ff,0 0 80px #f0c987aa}}
+.hero .sm{color:var(--gold);font-family:var(--serif);font-style:italic;font-size:1.35rem}
+.hero h1{font-size:clamp(2.6rem,12vw,4rem);font-style:italic;margin:2px 0 10px;background:linear-gradient(120deg,var(--gold),var(--rose) 60%,var(--ivory));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .for{font-size:1.1rem;color:var(--mute)}
+.ring{width:86px;margin:26px 0 8px;filter:drop-shadow(0 0 14px #f0c98799);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-9px)}}
+.count{display:flex;gap:10px;margin-top:22px;justify-content:center}
+.count div{min-width:66px;padding:12px 6px;border-radius:16px;background:#ffffff0d;border:1px solid #f0c98733}
+.count b{display:block;font:600 1.9rem var(--serif);color:var(--gold)}
+.count span{font-size:.72rem;color:var(--mute)}
+.cap{margin-top:12px;font-size:.9rem;color:var(--mute)}
+.cue{margin-top:34px;color:var(--gold);font-size:.85rem;animation:float 2s infinite}
+.photo{width:100%;aspect-ratio:4/5;border-radius:200px 200px 22px 22px;overflow:hidden;border:0;box-shadow:0 0 0 6px var(--bg),0 0 0 7.5px #f0c987aa,0 24px 70px #000a,0 0 80px #f2a7b822;background:linear-gradient(160deg,#4a2a6a,#7a3a63);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo.empty::after{content:"♥";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;color:#f2a7b866}
+h2{font-size:clamp(2rem,9vw,2.8rem);font-style:italic;color:var(--gold);margin-bottom:26px}
+.line{font-family:var(--serif);font-size:1.5rem;line-height:1.5;margin:0 0 34px;opacity:0;transform:translateY(14px);transition:opacity 1.2s,transform 1.2s}
+.line.in{opacity:1;transform:none}
+.line em{color:var(--rose)}
+.sign{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--gold);margin-top:10px}
+/* ELENA */
+.elena .photo{margin:0 auto 26px;max-width:320px}
+.big{font:600 4.2rem var(--serif);color:var(--rose);line-height:1}
+.ename{font-family:var(--script);font-size:clamp(4rem,20vw,6rem);line-height:1;color:var(--ivory);text-shadow:0 0 30px #f2a7b8cc;margin:-4px 0 6px}
+.born{color:var(--gold);font-family:var(--serif);font-style:italic;font-size:1.25rem;margin-bottom:26px}
+/* TIMELINE */
+.tl{position:relative;text-align:left;padding-left:38px;margin-top:6px}
+.tl::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--rose),transparent)}
+.tl .it{position:relative;margin-bottom:34px}
+.tl .it::before{content:'♥';position:absolute;left:-37px;top:0;width:20px;height:20px;border-radius:50%;background:var(--bg);color:var(--rose);font-size:.9rem;line-height:20px;text-align:center;box-shadow:0 0 14px #f2a7b8}
+.tl b{display:block;font:italic 600 1.35rem var(--serif);color:var(--gold)}
+.tl span{font-family:var(--serif);font-size:1.3rem;line-height:1.35}
+.heartbig{width:110px;margin:0 auto 14px;animation:beat 1.6s infinite;filter:drop-shadow(0 0 24px #f2a7b8)}
+.note{background:#ffffff0e;border:1px solid #f2a7b844;border-radius:22px;padding:22px;margin-top:26px;font-family:var(--serif);font-size:1.3rem;font-style:italic}
+/* GALLERY */
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 26px 10px;margin:0 -26px;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 78%;scroll-snap-align:center}
+.gal .photo{border-radius:22px;aspect-ratio:3/4;box-shadow:0 0 0 4px var(--bg),0 0 0 5px #f0c98799,0 16px 40px #0009;margin:6px 6px 0}
+.gal figure{transform:scale(.94);transition:transform .5s}
+.gal figure:active{transform:scale(1)}
+.gal figcaption{margin-top:10px;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--mute)}
+/* PROMISE */
+.verse{padding:30px 22px;border-radius:24px;background:linear-gradient(160deg,#ffffff14,#ffffff06);border:1px solid #f0c98755;margin-bottom:34px}
+.verse p{font-family:var(--serif);font-size:1.45rem;font-style:italic;line-height:1.5}
+.verse cite{display:block;margin-top:12px;color:var(--gold);font-style:normal;font-weight:600}
+.vows{display:grid;gap:12px;text-align:left}
+.vow{width:100%;border:1px solid #f0c98744;background:#ffffff0a;color:var(--ivory);border-radius:18px;padding:16px 18px;font:inherit;text-align:left;cursor:pointer;display:flex;gap:14px;align-items:center;transition:background .5s,border-color .5s}
+.vow .h{font-size:1.4rem;filter:grayscale(1) opacity(.6);transition:.5s}
+.vow .t{font-family:var(--serif);font-size:1.25rem;line-height:1.35}
+.vow .t small{display:block;font:600 .75rem var(--sans);color:var(--gold);margin-top:2px}
+.vow .c{color:var(--mute)}
+.vow .o{display:none}
+.vow.open{background:linear-gradient(135deg,#f0c98724,#f2a7b824);border-color:var(--gold)}
+.vow.open .h{filter:none}
+.vow.open .c{display:none}.vow.open .o{display:block}
+#seal{opacity:0;pointer-events:none;transition:opacity 1s;margin-top:34px}
+#seal.on{opacity:1;pointer-events:auto}
+/* FINALE */
+#fin{position:fixed;inset:0;z-index:45;background:radial-gradient(90% 60% at 50% 40%,#5a2060,var(--bg));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;opacity:0;pointer-events:none;transition:opacity 1.2s}
+#fin.on{opacity:1;pointer-events:auto}
+#fin h1{font-family:var(--script);font-weight:400;font-size:clamp(3.4rem,17vw,5.4rem);color:var(--gold);text-shadow:0 0 30px #f0c98788}
+#fin p{font-family:var(--serif);font-size:1.5rem;font-style:italic;margin-top:14px;max-width:340px}
+#fin .x{position:absolute;top:calc(14px + env(safe-area-inset-top));right:18px;color:var(--mute);background:none;border:0;font-size:1.8rem}
+#music{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;width:44px;height:44px;border-radius:50%;border:1px solid #f0c98788;background:#1a1030cc;color:var(--gold);font-size:1.2rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<canvas id="sky"></canvas>
+<canvas id="fx"></canvas>
+<audio id="bg" src="music.mp3" loop preload="none"></audio>
+<button id="music" class="hidden" aria-label="Music">♪</button>
+
+<!-- PASSWORD -->
+<div id="gate">
+  <svg class="lock" viewBox="0 0 100 100" fill="none" stroke="#f0c987" stroke-width="3.5" stroke-linecap="round"><path d="M32 46V32a18 18 0 0 1 36 0v14"/><rect x="24" y="46" width="52" height="40" rx="12" fill="#f0c98718"/><path d="M50 74s-11-7-11-14a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 7-11 14-11 14z" fill="#f2a7b8" stroke="none"/></svg>
+  <h1>Something is waiting for you</h1>
+  <p>Priya, this is only for your eyes. Say the name of our little miracle to open it.</p>
+  <input id="pw" type="password" placeholder="Enter the password" autocomplete="off" autocapitalize="none" autocorrect="off" enterkeyhint="go">
+  <div id="err"></div>
+  <button class="btn" id="go">Open my surprise</button>
+</div>
+
+<!-- INTRO -->
+<div id="intro" class="hidden"><p id="ip"></p><span id="skip">tap to skip</span></div>
+
+<main id="app" class="hidden">
+  <section class="hero">
+    <div class="sm">Happy 2nd engagement anniversary</div>
+    <div class="nm">Priya</div>
+    <h1>2 years of us</h1>
+    <div class="for">and every day, I choose you again</div>
+    <svg class="ring" viewBox="0 0 100 100" fill="none" stroke="#f0c987" stroke-width="3"><circle cx="50" cy="62" r="24"/><path d="M38 24l12-12 12 12-12 14z" fill="#f2a7b8" stroke="#f2a7b8"/><path d="M38 24h24" /></svg>
+    <div class="count" id="count"></div>
+    <div class="cap">since the day you became mine</div>
+    <div class="cue">scroll slowly ↓</div>
+  </section>
+
+  <section>
+    <div class="photo" id="p-hero"><img src="images/us.jpg" alt="Us" onerror="this.remove();this.parentNode.classList.add('empty')"></div>
+  </section>
+
+  <section id="letter">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>A letter for you</h2>
+    <p class="line">Two years ago you said <em>yes</em>, and trusted me with your whole heart.</p>
+    <p class="line">You are your parents' only child, their entire world. They placed their one and only daughter in my hands. I will never take that lightly.</p>
+    <p class="line">On the <em>18th of December 2025</em> you went through the hardest, bravest day of your life. The fear, the pain, the surgery, and still you smiled when you first held her.</p>
+    <p class="line">Every mark that day left on you is a story of love. To me it is the most beautiful story I know.</p>
+    <p class="line">You give up your sleep, your comfort, even your own needs, so that our little girl can feel safe. <em>You are the best mother Elena could have.</em></p>
+    <p class="line">Thank you for choosing me. Thank you for Elena. Thank you for being you.</p>
+    <div class="sign">I love you, Priya</div>
+  </section>
+
+  <section>
+    <h2>Our story so far</h2>
+    <div class="tl">
+      <div class="it"><b>9 October 2024</b><span>You said yes, and my life began a new chapter.</span></div>
+      <div class="it"><b>18 December 2025</b><span>Elena was born. You became a mother, and I saw what true courage looks like.</span></div>
+      <div class="it"><b>9 October 2026</b><span>Two years of promises kept, with so many more to come.</span></div>
+    </div>
+  </section>
+
+  <section class="elena">
+    <div class="orn">✦</div>
+    <div class="ename">Elena</div>
+    <div class="born">born 18th December 2025</div>
+    <div class="photo" id="p-elena"><img src="images/elena.jpg" alt="Elena" onerror="this.remove();this.parentNode.classList.add('empty')"></div>
+    <div class="big" id="edays">0</div>
+    <div class="cap">days since Elena came into our lives</div>
+    <div class="note">“Mama, thank you for being so brave to meet me. I felt your love before I ever saw your face.”</div>
+  </section>
+
+  <section>
+    <h2>Moments we love</h2>
+    <div class="gal" id="gal"></div>
+    <div class="cap">swipe →</div>
+  </section>
+
+  <section id="promise">
+    <h2>My promise to you</h2>
+    <div class="verse">
+      <p>“Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.”</p>
+      <cite>Isaiah 41:10</cite>
+    </div>
+    <div class="verse">
+      <p>“Her children arise up, and call her blessed; her husband also, and he praiseth her.”</p>
+      <cite>Proverbs 31:28</cite>
+    </div>
+    <p class="cap" style="margin-bottom:16px">Tap each promise to open it</p>
+    <div class="vows" id="vows"></div>
+    <button class="btn" id="seal">Seal our promise ♥</button>
+  </section>
+</main>
+
+<div id="fin">
+  <button class="x" id="close" aria-label="Close">×</button>
+  <svg class="heartbig" viewBox="0 0 100 90"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0c987"/><stop offset="1" stop-color="#e57ba0"/></linearGradient></defs><path d="M50 84S6 56 6 28C6 8 34 0 50 22 66 0 94 8 94 28c0 28-44 56-44 56z" fill="url(#g)"/></svg>
+  <h1>Happy Anniversary, my love</h1>
+  <p>“A threefold cord is not quickly broken.”<br><small style="font:600 .9rem var(--sans);color:var(--gold)">Ecclesiastes 4:12</small></p>
+  <p style="font-size:1.25rem;color:var(--mute)">You, me and Elena, held together by God’s love, today and always.</p>
+  <p style="color:var(--gold)">With all my heart, forever yours, <span id="from"></span></p>
+</div>
+
+<script>
+/* ====== EDIT THESE ====== */
+const C={
+  password:'elena',
+  from:'Kranthi',                 // <- put your name here
+  engaged:'2024-10-09T00:00:00',   // engagement date
+  elena:'2025-12-18T00:00:00',
+  photos:[                          // add your photos to the images folder
+    {src:'images/photo1.jpg',cap:'Your smile, my favourite view'},
+    {src:'images/photo2.jpg',cap:'Eyes only for you'},
+    {src:'images/photo3.jpg',cap:'Under a sky of lights'},
+    {src:'images/photo4.jpg',cap:'My sunshine'},
+    {src:'images/photo5.jpg',cap:'Grace in every step'},
+    {src:'images/photo6.jpg',cap:'Quiet moments, full heart'},
+    {src:'images/photo7.jpg',cap:'Three hearts, one family'}
+  ],
+  vows:[
+    ['I will love you as Christ loved the church, with patience, sacrifice and grace.','Ephesians 5:25'],
+    ['I will pray with you and for you, every single day.','1 Thessalonians 5:17'],
+    ['Wherever you go, I will go. Your God will be my God.','Ruth 1:16'],
+    ['I will raise Elena with you in the love and fear of the Lord.','Proverbs 22:6'],
+    ['I will honour your parents as my own. They gave me their only daughter.','Exodus 20:12'],
+    ['When you are tired, I will carry you. You will never walk alone.','Ecclesiastes 4:9-10']
+  ]
+};
+/* ======================== */
+const $=s=>document.querySelector(s);
+$('#from').textContent=C.from;
+addEventListener('pointerdown',e=>{if(started&&!e.target.closest('.gal'))burst(e.clientX,e.clientY,7,.5)});
+
+/* floating hearts + confetti */
+const cv=$('#fx'),cx=cv.getContext('2d'),sk=$('#sky'),sx=sk.getContext('2d');let W,H,ps=[],stars=[],shoot=null;
+function rs(){W=cv.width=sk.width=innerWidth*devicePixelRatio;H=cv.height=sk.height=innerHeight*devicePixelRatio;
+stars=Array.from({length:110},()=>({x:Math.random()*W,y:Math.random()*H,r:(.4+Math.random()*1.3)*devicePixelRatio,p:Math.random()*6.3,s:.01+Math.random()*.03}))}
+rs();addEventListener('resize',rs);
+const cols=['#f2a7b8','#f0c987','#ffffff','#e57ba0'];
+function heart(x,y,s,c,a,r){cx.save();cx.translate(x,y);cx.rotate(r);cx.globalAlpha=a;cx.fillStyle=c;cx.beginPath();
+cx.moveTo(0,s*.3);cx.bezierCurveTo(-s,-s*.5,-s*.5,-s*1.1,0,-s*.4);cx.bezierCurveTo(s*.5,-s*1.1,s,-s*.5,0,s*.3);cx.fill();cx.restore()}
+function drift(n){for(let i=0;i<n;i++)ps.push({x:Math.random()*W,y:H+20,vx:(Math.random()-.5)*.5,vy:-(.5+Math.random()*1.1)*devicePixelRatio,s:(5+Math.random()*9)*devicePixelRatio,c:cols[i%4],a:.5,l:1,r:0,vr:(Math.random()-.5)*.03,g:0,pt:Math.random()<.35})}
+function burst(x,y,n,k=1){x*=devicePixelRatio;y*=devicePixelRatio;for(let i=0;i<n;i++){const an=Math.random()*6.283,v=(2+Math.random()*7)*k*devicePixelRatio;
+ps.push({x,y,vx:Math.cos(an)*v,vy:Math.sin(an)*v-3,s:(6+Math.random()*10)*devicePixelRatio,c:cols[i%4],a:1,l:1,r:Math.random()*6,vr:(Math.random()-.5)*.2,g:.12*devicePixelRatio})}}
+function petal(x,y,s,c,a,r){cx.save();cx.translate(x,y);cx.rotate(r);cx.globalAlpha=a;cx.fillStyle=c;cx.beginPath();cx.ellipse(0,0,s*.45,s,0,0,6.283);cx.fill();cx.restore()}
+let tk=0;
+(function loop(){sx.clearRect(0,0,W,H);
+stars.forEach(t=>{t.p+=t.s;sx.globalAlpha=.25+.6*Math.abs(Math.sin(t.p));sx.fillStyle='#fff4ea';sx.beginPath();sx.arc(t.x,t.y,t.r,0,6.283);sx.fill()});
+if(!shoot&&Math.random()<.004)shoot={x:Math.random()*W*.8+W*.2,y:Math.random()*H*.4,l:1};
+if(shoot){const d=devicePixelRatio;shoot.x-=9*d;shoot.y+=5*d;shoot.l-=.02;sx.globalAlpha=Math.max(0,shoot.l);sx.strokeStyle='#f0c987';sx.lineWidth=2*d;sx.beginPath();sx.moveTo(shoot.x,shoot.y);sx.lineTo(shoot.x+70*d,shoot.y-39*d);sx.stroke();if(shoot.l<=0)shoot=null}
+cx.clearRect(0,0,W,H);if(++tk%22===0&&ps.length<90)drift(1);
+ps=ps.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.r+=p.vr;if(p.g)p.l-=.008;(p.pt?petal:heart)(p.x,p.y,p.s,p.c,Math.max(0,p.g?p.l:p.a),p.r);return p.l>0&&p.y>-40&&p.y<H+60});
+requestAnimationFrame(loop)})();
+
+/* gate */
+const pw=$('#pw'),err=$('#err');
+function tryOpen(){
+  if(pw.value.trim().toLowerCase()===C.password){unlock()}
+  else{err.textContent='Not quite, think of our little girl 💕';$('#gate').classList.remove('shake');void $('#gate').offsetWidth;$('#gate').classList.add('shake');pw.select()}
+}
+$('#go').onclick=tryOpen;pw.onkeydown=e=>{if(e.key==='Enter')tryOpen()};
+
+/* intro */
+const msgs=['Hi Priya…','Today, we complete two years.','So I made you something.','Please read it slowly, my love ♥'];
+let skipped=false;
+function unlock(){
+  burst(innerWidth/2,innerHeight/2,40);
+  prepAudio();const a=$('#bg');a.volume=.6;
+  a.play().then(()=>{mode='mp3';showBtn()}).catch(()=>{startSynth();mode='synth';showBtn()});
+  $('#gate').style.opacity=0;setTimeout(()=>$('#gate').remove(),1000);
+  const it=$('#intro');it.classList.remove('hidden');it.style.opacity=1;
+  it.onclick=()=>{skipped=true;endIntro()};
+  const p=$('#ip');let i=0;
+  (function next(){if(skipped)return;if(i>=msgs.length){setTimeout(endIntro,1200);return}
+    p.classList.remove('on');setTimeout(()=>{if(skipped)return;p.textContent=msgs[i++];p.classList.add('on');setTimeout(next,2700)},900)})();
+}
+let started=false;
+function endIntro(){if(started)return;started=true;$('#app').classList.remove('hidden');scrollTo(0,0);
+  const it=$('#intro');it.style.opacity=0;setTimeout(()=>it.remove(),1300);init();burst(innerWidth/2,innerHeight/2,50)}
+
+/* app */
+function init(){
+  // counters
+  const cEl=$('#count');
+  function tick(){
+    const d=Date.now()-new Date(C.engaged),s=Math.floor(d/1e3);
+    const v=[['days',Math.floor(s/86400)],['hours',Math.floor(s%86400/3600)],['mins',Math.floor(s%3600/60)],['secs',s%60]];
+    cEl.innerHTML=v.map(x=>`<div><b>${x[1]}</b><span>${x[0]}</span></div>`).join('');
+    $('#edays').textContent=Math.floor((Date.now()-new Date(C.elena))/864e5).toLocaleString();
+  }
+  tick();setInterval(tick,1000);
+  // gallery
+  $('#gal').innerHTML=C.photos.map(p=>`<figure><div class="photo"><img src="${p.src}" alt="" onerror="this.remove();this.parentNode.classList.add('empty')"></div><figcaption>${p.cap}</figcaption></figure>`).join('');
+  // letter lines reveal one by one as she scrolls
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.dataset.b)burst(innerWidth/2,innerHeight*.6,14);io.unobserve(e.target)}}),{threshold:.7});
+  document.querySelectorAll('.line').forEach((l,i)=>{if(i%2)l.dataset.b=1;io.observe(l)});
+  // vows
+  let opened=0;
+  $('#vows').innerHTML=C.vows.map(v=>`<button class="vow"><span class="h">♥</span><span class="t"><span class="c">Tap to open a promise</span><span class="o">${v[0]}<small>${v[1]}</small></span></span></button>`).join('');
+  document.querySelectorAll('.vow').forEach(b=>b.onclick=e=>{
+    if(b.classList.contains('open'))return;b.classList.add('open');
+    const r=b.getBoundingClientRect();burst(r.left+30,r.top+r.height/2,22);
+    if(++opened===C.vows.length)$('#seal').classList.add('on')});
+  $('#seal').onclick=()=>{$('#fin').classList.add('on');
+    let n=0;const t=setInterval(()=>{burst(innerWidth*(.15+Math.random()*.7),innerHeight*(.2+Math.random()*.4),34);if(++n>9)clearInterval(t)},450)};
+  $('#close').onclick=()=>$('#fin').classList.remove('on');
+}
+let AC,bus,mg,mode='',on=false,nextT=0,bar=0;
+function showBtn(){$('#music').classList.remove('hidden');$('#music').textContent='♪'}
+function prepAudio(){try{AC=new(window.AudioContext||window.webkitAudioContext)();AC.resume()}catch(e){}}
+function startSynth(){if(!AC)return;AC.resume();mg=AC.createGain();mg.gain.value=0;mg.connect(AC.destination);
+const len=AC.sampleRate*3,buf=AC.createBuffer(2,len,AC.sampleRate);
+for(let c=0;c<2;c++){const d=buf.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.5)}
+const cv=AC.createConvolver();cv.buffer=buf;const wet=AC.createGain();wet.gain.value=.6;
+bus=AC.createGain();bus.connect(mg);bus.connect(cv);cv.connect(wet);wet.connect(mg);
+mg.gain.linearRampToValueAtTime(.55,AC.currentTime+4);on=true;nextT=AC.currentTime+.2;sched()}
+function note(f,t,d,v){[[1,v,d],[2,v*.22,d*.35]].forEach(([m,vv,dd])=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f*m;
+g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vv,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+dd);o.connect(g);g.connect(bus);o.start(t);o.stop(t+dd+.05)})}
+function pad(fs,t,d){fs.forEach(f=>{const o=AC.createOscillator(),g=AC.createGain();o.type='triangle';o.frequency.value=f/2;
+g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+1.5);g.gain.linearRampToValueAtTime(0,t+d);o.connect(g);g.connect(bus);o.start(t);o.stop(t+d+.1)})}
+const CH=[{c:[220,261.63,329.63],b:110,m:[659.25,783.99,880,783.99]},{c:[174.61,220,261.63],b:87.31,m:[698.46,880,783.99,698.46]},{c:[196,261.63,329.63],b:130.81,m:[659.25,783.99,1046.5,783.99]},{c:[196,246.94,293.66],b:98,m:[587.33,783.99,987.77,783.99]}];
+function sched(){while(nextT<AC.currentTime+1.5){const h=CH[bar%4],S=.5;pad(h.c,nextT,4.4);note(h.b,nextT,3,.22);
+[0,1,2,1,2,1,2,1].forEach((k,i)=>note(h.c[k]*2,nextT+i*S,1.6,.07));
+[0,2,4,6].forEach((st,i)=>note(h.m[i],nextT+st*S,2.2,.11));nextT+=8*S;bar++}setTimeout(sched,300)}
+$('#music').onclick=()=>{const b=$('#music');
+if(mode==='mp3'){const a=$('#bg');if(a.paused){a.play();b.textContent='♪'}else{a.pause();b.textContent='×'}}
+else if(AC){if(AC.state==='running'){AC.suspend();b.textContent='×'}else{AC.resume();b.textContent='♪'}}};
+</script>
+</body>
+</html>
